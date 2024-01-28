@@ -1,0 +1,41 @@
+.footer {
+  &__div {
+    display: block;
+
+    &__logo {
+      margin: 0 0 0 40%;
+      text-align: center;
+      color: $white;
+    }
+
+    &__ads {
+      width: 100%;
+      color: $white;
+
+      br {
+        display: none;
+      }
+
+      h5 {
+        margin-top: 5%;
+        text-align: center;
+      }
+
+      &__parg {
+        margin-top: 6%;
+        @include flex-items(flex, center, center);
+        flex-direction: column;
+        color: $white;
+
+        a {
+          color: $white;
+        }
+
+        p {
+          padding-top: 6%;
+          color: $white;
+        }
+      }
+    }
+  }
+}

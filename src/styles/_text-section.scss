@@ -1,0 +1,43 @@
+main{
+.text__section {
+  padding-top: 6%;
+  text-align: center;
+
+  &__text {
+    @include font-type(Roboto, 53px, 64px, $lightBlack);
+  }
+
+  &__parg {
+    width: 35%;
+    margin: 4% auto;
+    @include font-type(Poppins, 24px, 32px, $pargGray);
+  }
+
+  &__articles {
+    @include flex-items(flex, space-between, start);
+    width: 70%;
+    margin: auto;
+
+    article {
+      width: 45%;
+      @include font-type(Source Sans Pro, 16px, 22px, $pargGray);
+    }
+  }
+
+  &__button {
+    margin-top: 50px;
+    padding: 5px 18px;
+    border: none;
+    border-radius: 18px;
+    background: $sky-blue;
+    cursor: pointer;
+    transition: 0.5s;
+    @include font_type(Oswald, 14px, 26px, $black);
+
+    &:hover {
+      transform: rotate(8deg);
+      transform-origin: left;
+    }
+  }
+}
+}

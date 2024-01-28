@@ -1,0 +1,72 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/Group.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &__menu {
+    width: 55%;
+    margin-left: 10%;
+    padding-top: 30px;
+    @include flex-items;
+
+    &-box {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    &__lg {
+      @include font-type(Source Sans SemiBold, 20px, 15px);
+    }
+
+    &__items {
+      @include flex-items;
+      width: 55%;
+      list-style: none;
+
+      a {
+        cursor: pointer;
+        letter-spacing: 3px;
+        border-bottom: 3px solid transparent;
+        padding-bottom: 3px;
+        transition: 0.2s;
+        @include font-type(Source Sans Pro, 14px, 16px);
+
+        &:hover {
+          border-bottom: 3px solid $sky-blue;
+          @include font-type(Source Sans Bold, 14px, 16px, $sky-blue);
+        }
+      }
+    }
+  }
+
+  &__div {
+    width: 50%;
+    margin-left: 10%;
+    padding-top: 5%;
+    text-align: center;
+
+    &__logo {
+      width: 30%;
+      animation: animation-logo 2s ease 2s infinite;
+    }
+
+    &__text {
+      text-transform: uppercase;
+      @include font-type(Roboto Bold, 64px, 77px);
+    }
+
+    &__parg {
+      width: 60%;
+      margin: 3% auto;
+      text-align: start;
+      @include font-type(Source Sans Pro, 24px, 32px, $darkWhite);
+    }
+  }
+}

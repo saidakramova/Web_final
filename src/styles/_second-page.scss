@@ -1,0 +1,56 @@
+main{
+
+.secondpage {
+  margin-top: 10%;
+  padding-top: 5%;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../assets/pexels-alena-darmel-7742817 1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+
+  &__div {
+    width: 50%;
+    margin: auto;
+
+    &__text {
+      @include font-type(Roboto Bold, 50px, 64px);
+    }
+
+    &__center {
+      border: 5px solid $white;
+      border-radius: 16px;
+      width: 450px;
+      height: 250px;
+      margin: 5% auto;
+      padding-top: 4%;
+      align-content: center;
+
+      button {
+        width: 145px;
+        height: 143px;
+        border-radius: 50%;
+        color: $white;
+        background-color: $sky-blue;
+        border: 0;
+        cursor: pointer;
+        font-size: 65px;
+        transition: 0.3s;
+        margin-top: 3%;
+
+        &:hover {
+          color: $sky-blue;
+          background-color: $white;
+        }
+      }
+    }
+
+    &__parg {
+      margin: 15% auto;
+      @include font-type(Source Sans Pro, 24px, 32px);
+    }
+  }
+}
+}

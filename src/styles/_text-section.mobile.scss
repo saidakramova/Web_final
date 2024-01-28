@@ -1,0 +1,35 @@
+main{
+
+
+.text__section {
+  &__text {
+    margin: 12% auto;
+    width: 70%;
+    @include font-type(Roboto, 38px, 55px, $lightBlack);
+
+    br {
+      display: none;
+    }
+  }
+
+  &__parg {
+    width: 80%;
+    @include font-type(Source Sans Pro, 24px, 32px, $pargGray);
+  }
+
+  &__articles {
+    display: grid;
+    gap: 40px;
+    width: 90%;
+    margin-top: 15%;
+
+    article {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    margin: 13% auto;
+  }
+}
+}

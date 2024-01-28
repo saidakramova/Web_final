@@ -1,0 +1,106 @@
+.header {
+  background-image: url('../assets/Rectangle 13 (2).png'),
+    url('../assets/pexels-pavel-mobile.png');
+  background-blend-mode: overlay;
+  background-size: cover;
+  height: 800px;
+
+  &__menu {
+    &-box {
+      position: absolute;
+      display: block;
+      height: 32px;
+      width: 32px;
+      top: 25px;
+      left: 35px;
+      z-index: 3;
+      opacity: 0;
+      cursor: pointer;
+    }
+    &-list {
+      height: 26px;
+      width: 32px;
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      z-index: 2;
+      flex-direction: column;
+      @include flex-items(flex, space-between, start);
+      
+      &__item {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: $white;
+
+        &:nth-child(1) {
+          transform-origin: 0 0;
+          transition: transform 0.4s ease-in-out;
+        }
+        &:nth-child(2) {
+          transition: transform 0.2s ease-in-out;
+        }
+        &:nth-child(3) {
+          transform-origin: 0 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+      }
+    }
+
+    input[type='checkbox']:checked~.header__menu__items {
+      transform: translate(-10%);
+    }
+
+    input[type='checkbox']:checked~.header__menu-list .header__menu-list__item:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    input[type='checkbox']:checked~.header__menu-list .header__menu-list__item:nth-child(2) {
+      transform: scaleY(0);
+    }
+
+    input[type='checkbox']:checked~.header__menu-list .header__menu-list__item:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    &__items {
+      padding-top: 120px;
+      background-color: $black;
+      z-index: 1;
+      height: 800px;
+      width: 100%;
+      transition: transform 0.5s ease-in-out;
+      transform: translate(100%);
+      flex-direction: column;
+      @include flex-items(flex, start, center);
+      position: absolute;
+      top: 0;
+      gap: 60px;
+
+      a {
+        font-size: 25px;
+        color: $darkWhite;
+      }
+    }
+  }
+
+  &__div {
+    width: 72%;
+
+    &__logo {
+      width: 180px;
+      margin: 7% auto;
+    }
+
+    &__text {
+      @include font-type(Roboto Bold, 55px, 68px);
+    }
+
+    &__parg {
+      margin-top: 20%;
+      width: 80%;
+      text-align: center;
+    }
+  }
+}
